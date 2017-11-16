@@ -1,20 +1,25 @@
-var friends = [
+var friendsArray = [
    {
-      "name":"Erisdar The Mysterious One",
-      "photo":"https://forum.unity3d.com/proxy.php?image=http%3A%2F%2Fwww.infinitypbr.com%2Fdragon%2Fhd6.jpg&hash=572c8a1450b0670344e0da08cae18d18",
+      "name":"Lady Gaga",
+      "photo":"http://cdn-img.instyle.com/sites/default/files/styles/original/public/images/2017/03/032717-lady-gaga-best-beauty-lead.jpg?itok=e66ILzjz",
       "scores":[5,1,4,4,5,1,2,5,4,1]
    },
    {
-      "name":"Mistical Taytay",
-      "photo":"http://rizalprovince.ph/tourism_pictures/Avilon%20MZP%20-%20Montalban%20(2).jpg",
+      "name":"Trevor Noah",
+      "photo":"http://trevornoah.com/img/favicon.jpg",
       "scores":[4,2,5,1,3,2,2,1,3,2]
    },
    {
-      "name":"Skylar Rose",
-      "photo":"http://i2.wp.com/northstarz.ca/wp-content/uploads/2013/12/Rose.jpg",
+      "name":"Barack Obama",
+      "photo":"https://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg",
       "scores":[5,2,2,2,4,1,3,2,5,5]
+   },
+   {
+      "name":"Leonardo DiCaprio",
+      "photo":"https://c402277.ssl.cf1.rackcdn.com/photos/5698/images/magazine_small/Leonardo-DiCaprio_11.21.2013_Help.jpg?1385039650",
+      "scores":[3,1,1,3,4,1,4,2,2,5]
    }
 
 ]
 
-module.exports = friends;
+module.exports = friendsArray;

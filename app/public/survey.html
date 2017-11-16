@@ -158,7 +158,7 @@
 		<hr>
 	    <footer class="footer">
 	      <div class="container">
-		        <p><a href="/api/friends">API Friends List</a></p>
+		        <p><a href="../data/friends.js">API Friends List</a></p>
 	      </div>
 	    </footer>
 
@@ -168,7 +168,6 @@
 	<div id="resultsModal" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
 
-	    <!-- Modal content-->
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -187,7 +186,7 @@
 	</div>
 
   <script type="text/javascript">
-  	// Chosen CSS
+
     var config = {
       '.chosen-select'           : {},
       '.chosen-select-deselect'  : {allow_single_deselect:true},
@@ -198,9 +197,9 @@
     for (var selector in config) {
       $(selector).chosen(config[selector]);
     }
-    // Capture the form inputs 
+    
     $("#submit").on("click", function(){
-    	// Form validation
+    	
     	function validateForm() {
 		  var isValid = true;
 		  $('.form-control').each(function() {
@@ -213,10 +212,10 @@
 		  })
 		  return isValid;
 		}
-		// If all required fields are filled
+		
 		if (validateForm() == true)
 		{
-			// Create an object for the user's data
+		
 	    	var userData = {
 	    		name: $("#name").val(),
 	    		photo: $("#photo").val(),
@@ -231,14 +230,14 @@
 	    		 $("#q9").val(), 
 	    		 $("#q10").val() ]
 	    	}
-	    	// Grab the URL of the website
+
 	    	var currentURL = window.location.origin;
-	    	// AJAX post the data to the friends API. 
-	    	$.post(currentURL + "/api/friends", userData, function(data){
-	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
+	    
+	    	$.post(currentURL + "/data/friends.js", userData, function(data){
+	    	
 	    		$("#matchName").text(data.name);
 	    		$('#matchImg').attr("src", data.photo);
-		    	// Show the modal with the best match 
+		    
 		    	$("#resultsModal").modal('toggle');
 	    	});
 		}
